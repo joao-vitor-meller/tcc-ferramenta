@@ -1,0 +1,46 @@
+body {
+  background-color: white; 
+}
+
+#map-canvas {
+  width: auto;
+  height: 750px;
+}
+
+#info {
+  height: 140px;
+  float: left;
+  margin-bottom: 5px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+
+#infoCalc {
+  height: 140px;
+  float: left;
+  margin-bottom: 5px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+
+#calculadora{
+	margin-left: -65px;
+}
+
+.preloader-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;  
+}

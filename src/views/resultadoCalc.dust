@@ -1,0 +1,52 @@
+{>"layout" /}
+
+{<body}
+	<div class="row">
+	  <div class="container">
+	  <div><h3><i class="small material-icons teal-text">location_on</i> {cidade} | {hectares} hectares </h3></div>
+	  	<div></div>
+	  	
+	  	<table id="tabela" class="highlight" >
+	        <thead>
+	          <tr>
+				<th>Região</th>
+				<th>Municipio</th>
+				<th>Atividade</th>
+				<th>Produção</th>
+				<th>Ano</th>
+				<th>Valor da Atividade</th>
+				<th>Valor da Terra</th>
+	          </tr>
+	        </thead>
+	        <tbody>
+				  <tr>
+				  	{#regioes}
+				    	<td>{regiao}</td>
+					{/regioes}	
+				    <td>{cidade}</td>
+				    <td>{atividade}</td>
+				    <td>{producao}</td>
+				    <td>2019</td>
+				    <td>R$ {valor}</td>
+				    <td style="color: green;" id="arredondar">R$ {calc}</td>
+				  </tr>	          
+	        </tbody>
+	      </table>
+
+	      <div style="padding-top: 3%;">
+		    <div ><h3>  <i class=" small material-icons teal-text">trending_up</i> Resultados da Pesquisa</h3></div>
+		    <p> Para visualizar outros gráficos, estimativas e mapa, role entre as páginas < 5 de 5 >, abaixo.</p>
+
+		  	<iframe id="frame" width="1200" height="900" src="https://app.powerbi.com/view?r=eyJrIjoiNTFiMGU2NzYtMTE0ZC00Y2Q4LWIxMzItOGIzNTQ0ZjYwOWY3IiwidCI6IjE4ZjIyZmY5LWI5OGItNGFmZi04YTFkLTIzOGNlYTRjOWM2YyJ9" frameborder="0" allowFullScreen="true"></iframe>
+	  	</div>
+
+	  	<div class="fixed-action-btn">
+		  <a class="btn-floating btn-large teal" onclick="rolar()">
+		    <i class="large material-icons">arrow_downward</i>
+		  </a>
+		</div>
+	  </div>
+	</div>
+
+
+{/body}

@@ -1,0 +1,78 @@
+{>"layout" /}
+
+{<body}
+
+	<div class="row">
+      <div class="col s3 " style="margin-top: 20px;">
+      		<div class="card-content" >
+      			<div class="row">
+	      			<div class="col s12">
+	      				<label >Buscar Localidade: <input type="text" id="txtbusca" onchange="busca_por_cidade(document.getElementById('txtbusca').value);" placeholder="Cidade, RS"></label>
+	      			</div>
+				    <div style="margin-bottom: 10px;" class="col s12">
+				      <ul class="tabs">
+				        <li class="tab col s6"><a href="#test1" class="active">Banco de Dados</a></li>
+				        <li class="tab col s6"><a href="#test2">Calculadora</a></li>
+				      </ul>
+				    </div>
+				    <div id="test1" class="col s12">
+				    	<form method="post" action="/cidades">
+						    <div class="modal-content">
+						    	<label>Cidade: <input type="text" name="cidade" id="txtCidade" readonly required="true"></label>
+						    	<label>Metros²: <input type="text" name="m" id="m" readonly></label>
+						    	<label>Hectares: <input type="text" name="hectare" id="hectare" required="true" readonly></label>
+						    	<label>Coordenadas: <h6><textarea id="info" class="black-text" disabled> </textarea></h6></label>
+						    </div>
+						    <div class="modal-">
+						     	<input type="submit" style="margin-top: 20px;" class="waves-light btn-small" value="Gerar Valor">
+						    </div>
+					    </form>	
+				    </div>
+				    <div id="test2" class="col s12">
+				    	<form method="post" action="/cidadesCalc">
+						    <div class="modal-content">
+						    	<!-- <label>Cidade: <input type="text" name="cidade" id="txtCidadeCalc" required="true"></label> -->
+						    	<label>Cidade:
+						    		<select required="true" name="cidade">
+						    			{#municipio}
+								      		<option value="{municipio}">{municipio}</option>
+								      	{/municipio}
+								    </select>
+						    	</label>
+						    	<label>Hectares: <input type="text" name="hectare" id="hectareCalc" required="true" placeholder="hm²"></label>
+						    	<label>Tipo de Atividade:
+						    		<select required="true" name="atividade">
+								      <option value="Grãos">Grãos</option>
+								      <option value="Arroz">Arroz</option>
+								      <option value="Fruticultura">Fruticultura</option>
+								      <option value="Pastagem">Pastagem</option>
+								    </select> 
+						    	</label>
+						    	<label>Capacidade de Produção: 
+						    		<select required="true" name="producao">
+								      <option value="Baixa">Baixa</option>
+								      <option value="Média">Média</option>
+								      <option value="Alta">Alta</option>
+								    </select> 
+							    </label>
+						    	<label>Valor: <input type="text" name="valor" required="true" placeholder="R$"></label>
+						    	<label>Coordenadas: <h6><textarea id="infoCalc" class="black-text" disabled> </textarea></h6></label>
+						    </div>
+						    <div class="modal-">
+						     	<input type="submit" style="margin-top: 20px;" class="waves-light btn-small" value="Gerar Valor">
+						    </div>
+					    </form>	
+				    </div>
+				</div>
+      		
+		    <!-- <button style="margin-top: 20px;" class="waves-light btn-small" onclick="initialize()">Recomeçar</button> -->
+		    </div>
+      </div>
+
+      <div class="col s9">
+  		<body onload="initialize()">
+          <div id="map-canvas" style="margin-top: 20px;"></div>
+        </body>
+      </div>
+
+{/body}
