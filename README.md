@@ -1,6 +1,6 @@
 # tcc-ferramenta
 
-Com o objetivo de disponibilizar esta análise, foi elaborada uma ferramenta web para realizar a busca do valor regional da terra de forma interativa. A ferramenta, é implementada utilizando a linguagem NodeJS, com a API do Google Maps, juntamente com a API do OpenStreetMaps, para facilitar a busca pelas propriedades dos produtores rurais, e calcular o valor da terra a partir da quantidade de hectares demarcados. 
+Com o objetivo de disponibilizar a pesquisa, foi elaborada uma ferramenta web para realizar a busca do valor regional da terra de forma interativa. A ferramenta, é implementada utilizando a linguagem NodeJS, com a API do Google Maps, juntamente com a API do OpenStreetMaps, para facilitar a busca pelas propriedades dos produtores rurais, e calcular o valor da terra a partir da quantidade de hectares demarcados. 
 
 Ao acessar a plataforma é obtido a informação da localização atual (cidade), do usuário através da geolocalização do Google, contendo também a opção de buscar outras localidades, e é criado um polígono de 3 vértices para ser ajustado com base na área de terra. 
 
